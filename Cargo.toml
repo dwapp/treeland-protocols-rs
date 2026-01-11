@@ -5,16 +5,17 @@ documentation = "https://docs.rs/wayland-protocols-treeland"
 repository = "https://github.com/dwapp/treeland-protocols-rs"
 authors = ["rewine"]
 license = "MIT"
-keywords = ["wayland", "client", "server", "protocol", "treeland", "deepin"]
+keywords = ["wayland", "client", "server", "protocol"]
 description = "Generated API for the Treeland wayland protocol extensions"
 categories = ["gui", "api-bindings"]
 edition = "2021"
 rust-version = "1.65"
-readme = "README-crate.md"
+readme = "README.md"
 include = [
     "src/",
     "LICENSE",
     "treeland-protocols/xml/",
+    "README.md",
 ]
 
 [dependencies]
