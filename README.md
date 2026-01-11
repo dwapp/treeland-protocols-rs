@@ -6,7 +6,7 @@ Rust bindings for Treeland Wayland protocol extensions.
 
 ## Overview
 
-This crate provides Rust bindings to the Treeland Wayland protocol extensions. [Treeland](https://github.com/vioken/treeland) is a Wayland compositor developed by UnionTech/Deepin for DDE (Deepin Desktop Environment).
+This crate provides Rust bindings to the Treeland Wayland protocol extensions. [Treeland](https://github.com/linuxdeepin/treeland) is a Wayland compositor developed by UnionTech/Deepin for DDE (Deepin Desktop Environment).
 
 These bindings are built on top of [wayland-client](https://crates.io/crates/wayland-client) and [wayland-server](https://crates.io/crates/wayland-server).
 
@@ -148,13 +148,13 @@ cargo check --all-features
 Contributions are welcome! Please note:
 
 1. The `treeland-protocols/` directory is a git submodule pointing to the upstream protocol definitions
-2. Protocol bugs should be reported to the [treeland-protocols](https://github.com/vioken/treeland-protocols) repository
+2. Protocol bugs should be reported to the [treeland-protocols](https://github.com/linuxdeepin/treeland-protocols) repository
 3. Binding issues can be reported here
 
 ## Related Projects
 
-- [treeland](https://github.com/vioken/treeland) - The Treeland Wayland compositor
-- [treeland-protocols](https://github.com/vioken/treeland-protocols) - Protocol definitions
+- [treeland](https://github.com/linuxdeepin/treeland) - The Treeland Wayland compositor
+- [treeland-protocols](https://github.com/linuxdeepin/treeland-protocols) - Protocol definitions
 - [wayland-rs](https://github.com/smithay/wayland-rs) - Rust Wayland bindings
 - [wayland-protocols-wlr](https://crates.io/crates/wayland-protocols-wlr) - WLR protocol bindings
 - [wayland-protocols-plasma](https://crates.io/crates/wayland-protocols-plasma) - KDE Plasma protocol bindings

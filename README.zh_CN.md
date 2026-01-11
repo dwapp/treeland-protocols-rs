@@ -6,7 +6,7 @@
 
 ## 概述
 
-本项目为 Treeland Wayland 协议扩展提供 Rust 绑定。[Treeland](https://github.com/vioken/treeland) 是由统信软件/深度开发的用于 DDE（深度桌面环境）的 Wayland 合成器。
+本项目为 Treeland Wayland 协议扩展提供 Rust 绑定。[Treeland](https://github.com/linuxdeepin/treeland) 是由统信软件/深度开发的用于 DDE（深度桌面环境）的 Wayland 合成器。
 
 这些绑定基于 [wayland-client](https://crates.io/crates/wayland-client) 和 [wayland-server](https://crates.io/crates/wayland-server) 构建。
 
@@ -162,13 +162,13 @@ cargo check --all-features
 欢迎贡献！请注意：
 
 1. `treeland-protocols/` 目录是指向上游协议定义的 git 子模块
-2. 协议 bug 应报告到 [treeland-protocols](https://github.com/vioken/treeland-protocols) 仓库
+2. 协议 bug 应报告到 [treeland-protocols](https://github.com/linuxdeepin/treeland-protocols) 仓库
 3. 绑定问题可以在此处报告
 
 ## 相关项目
 
-- [treeland](https://github.com/vioken/treeland) - Treeland Wayland 合成器
-- [treeland-protocols](https://github.com/vioken/treeland-protocols) - 协议定义
+- [treeland](https://github.com/linuxdeepin/treeland) - Treeland Wayland 合成器
+- [treeland-protocols](https://github.com/linuxdeepin/treeland-protocols) - 协议定义
 - [wayland-rs](https://github.com/smithay/wayland-rs) - Rust Wayland 绑定
 - [wayland-protocols-wlr](https://crates.io/crates/wayland-protocols-wlr) - WLR 协议绑定
 - [wayland-protocols-plasma](https://crates.io/crates/wayland-protocols-plasma) - KDE Plasma 协议绑定
