@@ -1,0 +1,34 @@
+[package]
+name = "wayland-protocols-treeland"
+version = "0.1.0"
+documentation = "https://docs.rs/wayland-protocols-treeland"
+repository = "https://github.com/dwapp/treeland-protocols-rs"
+authors = ["rewine"]
+license = "MIT"
+keywords = ["wayland", "client", "server", "protocol", "treeland", "deepin"]
+description = "Generated API for the Treeland wayland protocol extensions"
+categories = ["gui", "api-bindings"]
+edition = "2021"
+rust-version = "1.65"
+readme = "README-crate.md"
+include = [
+    "src/",
+    "LICENSE",
+    "treeland-protocols/xml/",
+]
+
+[dependencies]
+bitflags = "2"
+wayland-backend = "0.3"
+wayland-client = { version = "0.31", optional = true }
+wayland-scanner = "0.31"
+wayland-server = { version = "0.31", optional = true }
+
+[features]
+default = ["client"]
+client = ["wayland-client"]
+server = ["wayland-server"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
