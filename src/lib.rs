@@ -71,18 +71,15 @@ pub mod app_id_resolver {
 /// Screen/window capture protocol (unstable)
 ///
 /// This protocol provides screen and window capture functionality.
-///
-/// NOTE: Currently commented out - the protocol file has a bug where it references
-/// treeland_capture_once_context_v1.flags which doesn't exist (should be treeland_capture_frame_v1.flags)
-// pub mod capture {
-//     /// Unstable version 1 of the protocol
-//     pub mod v1 {
-//         wayland_protocol!(
-//             "./treeland-protocols/xml/treeland-capture-unstable-v1.xml",
-//             []
-//         );
-//     }
-// }
+pub mod capture {
+    /// Unstable version 1 of the protocol
+    pub mod v1 {
+        wayland_protocol!(
+            "./treeland-protocols/xml/treeland-capture-unstable-v1.xml",
+            []
+        );
+    }
+}
 
 /// DDE Shell protocol
 ///
@@ -106,10 +103,7 @@ pub mod dde_shell {
 /// DDM (Display Device Manager) protocol
 ///
 /// This protocol manages display devices.
-/// Note: This is an internal protocol between Treeland and DDM.
-/// 
-/// NOTE: Currently commented out - the protocol file uses name "treeland_ddm"
-/// without _v1 suffix, which causes issues with wayland-scanner.
+/// NOTE: This protocol has structural issues and requires fixes from upstream
 // pub mod ddm {
 //     /// Version 1 of the protocol
 //     pub mod v1 {
@@ -182,9 +176,7 @@ pub mod prelaunch_splash {
 /// Screensaver protocol
 ///
 /// This protocol allows clients to control the screensaver and inhibit idle.
-///
-/// NOTE: Currently commented out - the protocol file uses name "treeland_screensaver"
-/// without _v1 suffix, which causes issues with wayland-scanner.
+/// NOTE: This protocol has structural issues and requires fixes from upstream
 // pub mod screensaver {
 //     /// Version 1 of the protocol
 //     pub mod v1 {
