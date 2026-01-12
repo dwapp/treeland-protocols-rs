@@ -52,7 +52,7 @@ treeland-protocols-rs/
 
 ```toml
 [dependencies]
-wayland-protocols-treeland = { git = "https://github.com/AkiraMiyak662/treeland-protocols-rs" }
+wayland-protocols-treeland = { git = "https://github.com/dwapp/treeland-protocols-rs" }
 ```
 
 ## 功能特性
@@ -143,7 +143,7 @@ use wayland_protocols_treeland::personalization_manager::v1::client::{
 
 ```bash
 # 克隆仓库（包含子模块）
-git clone --recursive https://github.com/AkiraMiyak662/treeland-protocols-rs
+git clone --recursive https://github.com/dwapp/treeland-protocols-rs
 
 cd treeland-protocols-rs
 
@@ -162,7 +162,7 @@ cargo check --all-features
 欢迎贡献！请注意：
 
 1. `treeland-protocols/` 目录是指向上游协议定义的 git 子模块
-2. 协议 bug 应报告到 [treeland-protocols](https://github.com/linuxdeepin/treeland-protocols) 仓库
+2. 协议 bug 应报告到 [treeland-protocols](https://github.com/dwapp/treeland-protocols) 仓库
 3. 绑定问题可以在此处报告
 
 ## 相关项目
@@ -170,8 +170,6 @@ cargo check --all-features
 - [treeland](https://github.com/linuxdeepin/treeland) - Treeland Wayland 合成器
 - [treeland-protocols](https://github.com/linuxdeepin/treeland-protocols) - 协议定义
 - [wayland-rs](https://github.com/smithay/wayland-rs) - Rust Wayland 绑定
-- [wayland-protocols-wlr](https://crates.io/crates/wayland-protocols-wlr) - WLR 协议绑定
-- [wayland-protocols-plasma](https://crates.io/crates/wayland-protocols-plasma) - KDE Plasma 协议绑定
 
 ## 许可证
 

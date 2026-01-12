@@ -52,7 +52,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-wayland-protocols-treeland = { git = "https://github.com/AkiraMiyak662/treeland-protocols-rs" }
+wayland-protocols-treeland = { git = "https://github.com/dwapp/treeland-protocols-rs" }
 ```
 
 ## Features
@@ -129,7 +129,7 @@ use wayland_protocols_treeland::wallpaper_color::v1::client::treeland_wallpaper_
 
 ```bash
 # Clone with submodules
-git clone --recursive https://github.com/AkiraMiyak662/treeland-protocols-rs
+git clone --recursive https://github.com/dwapp/treeland-protocols-rs
 
 cd treeland-protocols-rs
 
@@ -156,8 +156,6 @@ Contributions are welcome! Please note:
 - [treeland](https://github.com/linuxdeepin/treeland) - The Treeland Wayland compositor
 - [treeland-protocols](https://github.com/linuxdeepin/treeland-protocols) - Protocol definitions
 - [wayland-rs](https://github.com/smithay/wayland-rs) - Rust Wayland bindings
-- [wayland-protocols-wlr](https://crates.io/crates/wayland-protocols-wlr) - WLR protocol bindings
-- [wayland-protocols-plasma](https://crates.io/crates/wayland-protocols-plasma) - KDE Plasma protocol bindings
 
 ## License
 

@@ -1,5 +1,5 @@
 //! This crate provides Rust bindings to the Treeland wayland protocol extensions
-//! provided in <https://github.com/AkiraMiyak662/treeland-protocols>
+//! provided in <https://github.com/linuxdeepin/treeland-protocols>
 //!
 //! Treeland is a Wayland compositor developed by UnionTech/Deepin, these protocols
 //! are used by DDE (Deepin Desktop Environment) components.
