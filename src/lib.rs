@@ -103,16 +103,16 @@ pub mod dde_shell {
 /// DDM (Display Device Manager) protocol
 ///
 /// This protocol manages display devices.
-/// NOTE: This protocol has structural issues and requires fixes from upstream
-// pub mod ddm {
-//     /// Version 1 of the protocol
-//     pub mod v1 {
-//         wayland_protocol!(
-//             "./treeland-protocols/xml/treeland-ddm-v1.xml",
-//             []
-//         );
-//     }
-// }
+/// Note: This is an internal protocol between Treeland and DDM.
+pub mod ddm {
+    /// Version 1 of the protocol
+    pub mod v1 {
+        wayland_protocol!(
+            "./treeland-protocols/xml/treeland-ddm-v1.xml",
+            []
+        );
+    }
+}
 
 /// Foreign toplevel manager protocol
 ///
@@ -176,16 +176,15 @@ pub mod prelaunch_splash {
 /// Screensaver protocol
 ///
 /// This protocol allows clients to control the screensaver and inhibit idle.
-/// NOTE: This protocol has structural issues and requires fixes from upstream
-// pub mod screensaver {
-//     /// Version 1 of the protocol
-//     pub mod v1 {
-//         wayland_protocol!(
-//             "./treeland-protocols/xml/treeland-screensaver-v1.xml",
-//             []
-//         );
-//     }
-// }
+pub mod screensaver {
+    /// Version 1 of the protocol
+    pub mod v1 {
+        wayland_protocol!(
+            "./treeland-protocols/xml/treeland-screensaver-v1.xml",
+            []
+        );
+    }
+}
 
 /// Shortcut manager protocol
 ///

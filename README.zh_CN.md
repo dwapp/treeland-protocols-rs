@@ -31,20 +31,20 @@ treeland-protocols-rs/
 | 协议 | 状态 | 描述 |
 |------|------|------|
 | `app_id_resolver` | ✅ | 窗口应用 ID 解析器 |
-| `capture` | ⚠️  | 屏幕/窗口捕获（上游存在 bug） |
+| `capture` | ✅ | 屏幕/窗口捕获 |
 | `dde_shell` | ✅ | DDE 壳层集成（多任务视图、窗口选择器等） |
-| `ddm` | ⚠️  | 显示设备管理器（非标准命名） |
+| `ddm` | ✅ | 显示设备管理器 |
 | `foreign_toplevel_manager` | ✅ | 外部顶层窗口管理 |
 | `output_manager` | ✅ | 输出/显示管理 |
 | `personalization_manager` | ✅ | 桌面个性化（壁纸、光标、主题） |
 | `prelaunch_splash` | ✅ | 预启动启动画面 |
-| `screensaver` | ⚠️  | 屏保控制（非标准命名） |
+| `screensaver` | ✅ | 屏保控制 |
 | `shortcut_manager` | ✅ | 全局快捷键注册（v1 & v2） |
 | `virtual_output_manager` | ✅ | 虚拟输出管理 |
 | `wallpaper_color` | ✅ | 壁纸颜色提取 |
 | `window_management` | ✅ | 窗口管理操作 |
 
-**注意**：标记为 ⚠️ 的协议由于上游协议定义中的问题目前被禁用。
+所有列出的协议均已启用并通过验证；如果上游协议定义发生更改，会在此处更新。
 
 ## 安装
 

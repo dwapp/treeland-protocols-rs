@@ -31,20 +31,20 @@ treeland-protocols-rs/
 | Protocol | Status | Description |
 |----------|--------|-------------|
 | `app_id_resolver` | ✅ | Application ID resolver for window identification |
-| `capture` | ⚠️  | Screen/window capture (has upstream bug) |
+| `capture` | ✅ | Screen/window capture |
 | `dde_shell` | ✅ | DDE shell integration (multitask view, window picker, etc.) |
-| `ddm` | ⚠️  | Display Device Manager (non-standard naming) |
+| `ddm` | ✅ | Display Device Manager |
 | `foreign_toplevel_manager` | ✅ | Foreign toplevel window management |
 | `output_manager` | ✅ | Output/display management |
 | `personalization_manager` | ✅ | Desktop personalization (wallpaper, cursor, theme) |
 | `prelaunch_splash` | ✅ | Pre-launch splash screen |
-| `screensaver` | ⚠️  | Screensaver control (non-standard naming) |
+| `screensaver` | ✅ | Screensaver control |
 | `shortcut_manager` | ✅ | Global shortcut registration (v1 & v2) |
 | `virtual_output_manager` | ✅ | Virtual output management |
 | `wallpaper_color` | ✅ | Wallpaper color extraction |
 | `window_management` | ✅ | Window management operations |
 
-**Note**: Protocols marked with ⚠️ are currently disabled due to issues in the upstream protocol definitions.
+All listed protocols are currently enabled and verified; if upstream protocol definitions change, they will be updated here.
 
 ## Installation
 
