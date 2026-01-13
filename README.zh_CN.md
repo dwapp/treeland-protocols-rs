@@ -19,9 +19,6 @@ treeland-protocols-rs/
 │   └── protocol_macro.rs    # 协议生成宏
 ├── treeland-protocols/      # Git 子模块 - 协议定义
 │   └── xml/                 # XML 协议文件
-├── example/                 # 参考实现
-│   ├── wayland-rs/         # 官方 wayland-rs 绑定
-│   └── wayland-protocols-hyprland-rs/  # Hyprland 协议绑定
 ├── Cargo.toml
 └── README.md
 ```

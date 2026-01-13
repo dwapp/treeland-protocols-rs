@@ -19,9 +19,6 @@ treeland-protocols-rs/
 │   └── protocol_macro.rs    # Protocol generation macro
 ├── treeland-protocols/      # Git submodule - protocol definitions
 │   └── xml/                 # XML protocol files
-├── example/                 # Reference implementations
-│   ├── wayland-rs/         # Official wayland-rs bindings
-│   └── wayland-protocols-hyprland-rs/  # Hyprland protocol bindings
 ├── Cargo.toml
 └── README.md
 ```
