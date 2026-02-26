@@ -2,46 +2,11 @@
 
 [English](README.md) | [简体中文](README.zh_CN.md)
 
-Rust bindings for Treeland Wayland protocol extensions.
-
-## Overview
-
-This crate provides Rust bindings to the Treeland Wayland protocol extensions. [Treeland](https://github.com/linuxdeepin/treeland) is a Wayland compositor developed by UnionTech/Deepin for DDE (Deepin Desktop Environment).
+Rust bindings for [Treeland Wayland protocol extensions](https://github.com/linuxdeepin/treeland-protocols).
 
 These bindings are built on top of [wayland-client](https://crates.io/crates/wayland-client) and [wayland-server](https://crates.io/crates/wayland-server).
 
-## Project Structure
-
-```
-treeland-protocols-rs/
-├── src/                      # Rust binding source code
-│   ├── lib.rs               # Main library entry
-│   └── protocol_macro.rs    # Protocol generation macro
-├── treeland-protocols/      # Git submodule - protocol definitions
-│   └── xml/                 # XML protocol files
-├── Cargo.toml
-└── README.md
-```
-
-## Supported Protocols
-
-| Protocol | Status | Description |
-|----------|--------|-------------|
-| `app_id_resolver` | ✅ | Application ID resolver for window identification |
-| `capture` | ✅ | Screen/window capture |
-| `dde_shell` | ✅ | DDE shell integration (multitask view, window picker, etc.) |
-| `ddm` | ✅ | Display Device Manager |
-| `foreign_toplevel_manager` | ✅ | Foreign toplevel window management |
-| `output_manager` | ✅ | Output/display management |
-| `personalization_manager` | ✅ | Desktop personalization (wallpaper, cursor, theme) |
-| `prelaunch_splash` | ✅ | Pre-launch splash screen |
-| `screensaver` | ✅ | Screensaver control |
-| `shortcut_manager` | ✅ | Global shortcut registration (v1 & v2) |
-| `virtual_output_manager` | ✅ | Virtual output management |
-| `wallpaper_color` | ✅ | Wallpaper color extraction |
-| `window_management` | ✅ | Window management operations |
-
-All listed protocols are currently enabled and verified; if upstream protocol definitions change, they will be updated here.
+For details about the protocols themselves, please refer to the upstream repository: https://github.com/linuxdeepin/treeland-protocols
 
 ## Installation
 
@@ -68,60 +33,6 @@ wayland-protocols-treeland = { git = "...", default-features = false, features =
 wayland-protocols-treeland = { git = "...", features = ["client", "server"] }
 ```
 
-## Usage Example
-
-### Registering a Global Shortcut
-
-```rust
-use wayland_client::{Connection, Dispatch, QueueHandle};
-use wayland_protocols_treeland::shortcut_manager::v1::client::{
-    treeland_shortcut_context_v1,
-    treeland_shortcut_manager_v1,
-};
-
-struct AppData;
-
-impl Dispatch<treeland_shortcut_manager_v1::TreelandShortcutManagerV1, ()> for AppData {
-    fn event(
-        _state: &mut Self,
-        _proxy: &treeland_shortcut_manager_v1::TreelandShortcutManagerV1,
-        _event: treeland_shortcut_manager_v1::Event,
-        _data: &(),
-        _conn: &Connection,
-        _qh: &QueueHandle<Self>,
-    ) {
-        // Handle manager events
-    }
-}
-
-impl Dispatch<treeland_shortcut_context_v1::TreelandShortcutContextV1, ()> for AppData {
-    fn event(
-        _state: &mut Self,
-        _proxy: &treeland_shortcut_context_v1::TreelandShortcutContextV1,
-        event: treeland_shortcut_context_v1::Event,
-        _data: &(),
-        _conn: &Connection,
-        _qh: &QueueHandle<Self>,
-    ) {
-        match event {
-            treeland_shortcut_context_v1::Event::Shortcut => {
-                println!("Shortcut triggered!");
-            }
-            _ => {}
-        }
-    }
-}
-```
-
-### Getting Wallpaper Color
-
-```rust
-use wayland_protocols_treeland::wallpaper_color::v1::client::treeland_wallpaper_color_manager_v1;
-
-// After binding the global...
-// let color_manager = globals.bind::<treeland_wallpaper_color_manager_v1::TreelandWallpaperColorManagerV1, _, _>(...);
-```
-
 ## Building
 
 ```bash
@@ -130,29 +41,8 @@ git clone --recursive https://github.com/dwapp/treeland-protocols-rs
 
 cd treeland-protocols-rs
 
-# Build
 cargo build
-
-# Run tests
-cargo test
-
-# Check all features
-cargo check --all-features
 ```
-
-## Contributing
-
-Contributions are welcome! Please note:
-
-1. The `treeland-protocols/` directory is a git submodule pointing to the upstream protocol definitions
-2. Protocol bugs should be reported to the [treeland-protocols](https://github.com/linuxdeepin/treeland-protocols) repository
-3. Binding issues can be reported here
-
-## Related Projects
-
-- [treeland](https://github.com/linuxdeepin/treeland) - The Treeland Wayland compositor
-- [treeland-protocols](https://github.com/linuxdeepin/treeland-protocols) - Protocol definitions
-- [wayland-rs](https://github.com/smithay/wayland-rs) - Rust Wayland bindings
 
 ## License
 
