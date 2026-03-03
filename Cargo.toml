@@ -1,6 +1,6 @@
 [package]
 name = "wayland-protocols-treeland"
-version = "0.1.1"
+version = "0.1.2"
 documentation = "https://docs.rs/wayland-protocols-treeland"
 repository = "https://github.com/dwapp/treeland-protocols-rs"
 authors = ["rewine"]
