@@ -22,6 +22,7 @@
 //! - [`output_manager`] - Output/display management
 //! - [`personalization_manager`] - Desktop personalization (wallpaper, cursor, theme)
 //! - [`prelaunch_splash`] - Pre-launch splash screen
+//! - [`plugin_manager`] - DDE tray plugin manager
 //! - [`screensaver`] - Screensaver control
 //! - [`shortcut_manager`] - Global shortcut registration
 //! - [`virtual_output_manager`] - Virtual output management
@@ -168,6 +169,19 @@ pub mod prelaunch_splash {
     pub mod v1 {
         wayland_protocol!(
             "./treeland-protocols/xml/treeland-prelaunch-splash-v1.xml",
+            []
+        );
+    }
+}
+
+/// DDE tray plugin manager protocol
+///
+/// This protocol allows DDE tray plugins to communicate with the compositor.
+pub mod plugin_manager {
+    /// Version 1 of the protocol
+    pub mod v1 {
+        wayland_protocol!(
+            "./dde-tray-loader-protocols/plugin-manager-v1.xml",
             []
         );
     }
